@@ -7,14 +7,12 @@ const cru = document.querySelector("#crucial");
 const imp = document.querySelector("#important");
 
 const generateTemplate = (todo) => {
-  const html = `
+  return `
 
 <li class="list-group-item d-flex justify-content-between align-items-center">
     <span>${todo}</span>
     <i class="fa-solid fa-trash delete"></i>
 </li>`;
-
-  lists.innerHTML += html;
 };
 
 addForm.addEventListener("submit", (e) => {
@@ -23,11 +21,11 @@ addForm.addEventListener("submit", (e) => {
   const todo = addForm.add.value.trim();
 
   if (cru.checked) {
-    crucial.append(todo);
+    crucial.insertAdjacentHTML("beforeend", generateTemplate(todo));
   } else if (imp.checked) {
-    important.append(todo);
+    important.insertAdjacentHTML("beforeend", generateTemplate(todo));
   } else {
-    canWait.append(todo);
+    canWait.insertAdjacentHTML("beforeend", generateTemplate(todo));
   }
   addForm.reset();
 });
