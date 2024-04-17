@@ -1,0 +1,51 @@
+body{
+    background: #352f5b;
+}
+.container{
+    max-width: 800px;
+}
+input[type=text],
+input[type=text]:focus{
+    color: whitesmoke;
+    border: none;
+    background: rgba(0,0,0,0.2);
+    max-width: 450px;
+}
+
+.todos li{
+    background: #423a6f;
+    color: white;
+}
+
+.list-group-item{
+  width: 300px;
+}
+
+.listWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete{
+    color:whitesmoke;
+    cursor: pointer;
+}
+
+ol{
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+.wrapper{
+    display: flex;
+}
+.importance{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.filtered{
+    display: none !important;
+}
